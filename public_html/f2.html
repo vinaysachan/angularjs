@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script/angular.js" type="text/javascript"></script>
+        <script src="script/script.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div ng-controller="myController">
+            {{message}}
+            <div>First Name : {{employee.fName}}</div>
+            <div>Last Name : {{employee.lName}}</div>
+            <div>Gender : {{employee.gender}}</div>
+
+            <hr/> 
+            <div>Country Name : {{country.name}}</div>
+            <div>Country Capital : {{country.capital}}</div>
+            <div><img alt="{{country.name + ' Flag'}}" ng-src="{{country.flag}}" width="100"/> </div>
+        </div>
+    </body>
+</html>
