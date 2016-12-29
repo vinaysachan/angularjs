@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+    <head>
+        <title>Web Service in AngularJS using $http</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="script/angular.js" type="text/javascript"></script>
+        <script src="script/s6.js" type="text/javascript"></script>
+        <script src="script/filter.js" type="text/javascript"></script>
+        <link href="style/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div ng-controller="apiController1">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Username</td>
+                        <td>Gender</td>
+                        <td>DOB</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users">
+                        <td>{{user.name}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.gender | MygenderFilter}}</td>
+                        <td>{{user.dob}}</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        <br/><br/>
+        <div ng-controller="apiController2">
+            {{error}}
+            <br/>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Name</td>
+                        <td>Username</td>
+                        <td>Gender</td>
+                        <td>DOB</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users">
+                        <td>{{user.name}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.gender | MygenderFilter}}</td>
+                        <td>{{user.dob}}</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+    </body>
+</html>
