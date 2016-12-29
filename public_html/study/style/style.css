@@ -34,3 +34,11 @@ th {
     border-top: 10px solid black;
     display: inline-block;
 }
+
+.content {
+    width: 400px;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    font-size: large;
+}

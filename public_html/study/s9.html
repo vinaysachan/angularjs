@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+    <head>
+        <title>Angular JS anchor scroll</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <script src="script/angular.js" type="text/javascript"></script>
+        <script src="script/s9.js" type="text/javascript"></script>
+        <link href="style/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body >
+        <div ng-controller="myController">
+            <div style="float: left; width:910px; overflow-y: scroll; height: 500px;  border: 1px solid green; padding: 20px">
+                <h2>Country</h2>
+                <span ng-repeat="country in contries">
+                    <button ng-click="scrollTo(country.id)">{{country.name}}</button>
+                </span>
+            </div>
+            <div style="float: right; width: 200px; overflow-y: scroll; height: 500px; border: 1px solid red; padding: 20px;">
+                <h2>States</h2>
+                <fieldset id="{{country.id}}" style="padding: 10px;" ng-repeat="country in contries">
+                    <legend>{{country.name}}</legend>
+                    <ul>
+                        <li ng-repeat="state in country.state">{{state}}</li>
+                    </ul>
+                </fieldset>
+            </div>
+            <br clear="all" />
+        </div>
+    </body>
+</html>

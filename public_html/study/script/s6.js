@@ -16,6 +16,6 @@ var myApp = angular.module('myModule', []).controller('apiController1', function
 
     $http({
         'method': 'GET',
-        'url': 'http://localhost/angularjs/api/get_userss',
+        'url': 'http://localhost/angularjs/api/get_users',
     }).then(successCallBack, errorCallBack);
 });
