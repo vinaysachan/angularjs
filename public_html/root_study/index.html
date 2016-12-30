@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html ng-app="myModule">  
     <head>
-        <title></title>
+        <title>root Application</title>
+        <base href="/angularjs/public_html/root_study/"/>
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <script src="js/angular/angular.min.js" type="text/javascript"></script>
-        <script src="js/angular/angular-route.min.js" type="text/javascript"></script>
-
-
-        <!--        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-                <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>-->
-
+        <script src="js/angular/angular-route.min.js" type="text/javascript"></script> 
         <script src="js/script.js" type="text/javascript"></script>
     </head>
     <body>
@@ -23,9 +19,10 @@
             </tr>
             <tr>
                 <td class="leftMenu">
-                    <a data-ng-href="#!home" >Home</a>
-                    <a data-ng-href="#!country">Country</a>
-                    <a data-ng-href="#!users">Users</a>
+                    <a data-ng-href="home" >Home</a>
+                    <a data-ng-href="country">Country</a>
+                    <a data-ng-href="users">Users</a>
+                    <a data-ng-href="inline">Inline</a>
                 </td>
                 <td class="mainContent">
                     <div ng-view></div>

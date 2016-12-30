@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+    <head>
+        <title>
+            Angular nested scopes and controller as syntax &
+            Difference between $scope and $rootScope
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <script src="script/angular.js" type="text/javascript"></script>
+        <script src="script/s10.js" type="text/javascript"></script>
+        <link href="style/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div ng-controller="countryController as countryCtrl">
+            {{countryCtrl.name}}
+            <div ng-controller="stateController as stateCtrl">
+                {{countryCtrl.name}} - {{stateCtrl.name}} 
+                <div ng-controller="cityController as cityCtrl">
+                    {{countryCtrl.name}} - {{stateCtrl.name}} - {{cityCtrl.name}}
+                </div>
+            </div>
+        </div>
+        <br><br>
+
+        <div ng-controller="greenController">
+            <p>The Green controller color is :  {{greencolor}}</p>
+            <p>The controller color is :  {{rootScopecolor}}</p>
+            <p>The Red controller color is :  {{redcolor}}</p>
+        </div>
+
+        <div ng-controller="redController">
+            <p>The Red controller color is :  {{redcolor}}</p>
+            <p>The controller color is :  {{rootScopecolor}}</p>
+            <p>The Green controller color is :  {{greencolor}}</p>
+        </div>
+
+
+    </body>
+</html>

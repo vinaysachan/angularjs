@@ -1,6 +1,11 @@
-<h1>{{message}}</h1>
+<h1>{{userCtrl.title}}</h1>
 <ul>
-    <li ng-repeat="user in users">
-        {{user.name}}
+    <li ng-repeat="user in userCtrl.users">
+        <a data-ng-href="users/{{user.id}}">
+            {{user.name}}
+        </a> 
     </li>
 </ul>
+
+
+<button ng-click="userCtrl.reloadData()">Reload Users List</button>
